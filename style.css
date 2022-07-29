@@ -1,43 +1,32 @@
 html {
-    background-color: #1d1f21;
+    background-color: #1b1b1f;
 }
 
 body {
-    max-width: 60rem;
     margin: 0;
     height: 100%;
     color: #dfdfdf;
     font-weight: 400;
     font-size: 14px;
     font-family: 'Noto Sans', sans-serif;
-    line-height: 1.725;
-    -webkit-font-smoothing: antialiased;
-    margin-right: auto;
-    margin-left: auto;
+    line-height: 1.75;
     padding-right: 2rem;
     padding-left: 2rem;
 }
 
-@media (max-width: 480px) {
-    body {
-        padding-right: 1rem;
-        padding-left: 1rem;
-    }
-    .projects-container {
-        width: inherit;
-    }
-    .card {
-        width: inherit;
-    }
-}
 
 .navbar {
     display: flex;
     justify-content: flex-end;
 }
 
+.navbar h2 {
+    margin: 0;
+}
+
 .navbar > * {
-    margin-right: 12px;
+    margin-right: 16px;
+    margin-top: 16px;
 }
 
 ::-webkit-scrollbar {
@@ -45,7 +34,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -62,30 +51,34 @@ body {
 
 ::selection {
     background: #0097A7;
+    color: #dfdfdf;
 }
 
-.important-lines {
+h1 {
     font-family: monospace;
     color: #00ACC1;
 }
 
-.less-important-lines a {
+h2 {
     font-family: monospace;
 }
 
-.less-important-lines {
-    list-style-type: none;
-}
-
-.hackathon-list {
-    list-style: hackathon-mojis;
-}
-
 a {
+    text-decoration: none;
     color: #dfdfdf;
+}
+
+a h2, b {
+    color: #dfdfdf;
+    text-decoration: underline;
     text-decoration-color: #00ACC1;
     text-decoration-skip-ink: none;
     text-decoration-thickness: 0.2em;
+    transition: 0.15s ease;
+}
+
+a h2:hover, b:hover {
+    color: #00ACC1;
 }
 
 h1 {
@@ -102,13 +95,18 @@ p {
     justify-content: center;
 }
 
+.project-wrapper {
+    margin: 0 2rem 2rem 0;
+}
+
+.project-wrapper p {
+    text-decoration: none;
+}
+
 .card {
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.05);
-    margin: 2rem;
-    margin-left: 0;
-    margin-top: 0;
     height: 400px;
     width: 16rem;
     transition: 0.2s ease;
@@ -122,17 +120,31 @@ p {
 
 }
 
-.card h3 {
-    margin: 10px;
+.card h2 {
+    padding: 10px;
+    margin: 0;
 }
 
 .card p {
-    margin: 10px;
-    font-family: monospace;
+    margin: 0;
+    padding: 10px;
 }
 
-@counter-style hackathon-mojis {
-    system: fixed;
-    symbols: 🥉 💰 🗑️ 📒
+@media (max-width: 480px) {
+    body {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    .navbar {
+        justify-content: center;
+    }
+    .projects-container {
+        width: inherit;
+    }
+    .project-wrapper {
+        margin-right: 0;
+    }
+    .card {
+        width: 230px;
+    }
 }
-

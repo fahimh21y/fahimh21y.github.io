@@ -1,0 +1,120 @@
+html {
+    background-color: #1d1f21;
+}
+
+body {
+    max-width: 48rem;
+    margin: 0;
+    height: 100%;
+    color: #dfdfdf;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 1.725;
+    -webkit-font-smoothing: antialiased;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar > * {
+    margin-right: 12px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ACC1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00838F;
+}
+
+::-moz-selection {
+    background: #0097A7;
+}
+
+::selection {
+    background: #0097A7;
+}
+
+.important-lines {
+    font-family: monospace;
+    color: #00ACC1;
+}
+
+.less-important-lines a {
+    font-family: monospace;
+}
+
+.less-important-lines {
+    list-style-type: none;
+}
+
+.hackathon-list {
+    list-style: hackathon-mojis;
+}
+
+a {
+    color: #dfdfdf;
+    text-decoration-color: #00ACC1;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 0.2em;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+p {
+    font-size: 16px;
+}
+
+.projects-container {
+    display: flex;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 1rem;
+    border-radius: 8px;
+    height: 400px;
+    width: 250px;
+}
+
+.card h3 {
+    margin: 10px;
+}
+
+.card p {
+    margin: 10px;
+    font-family: monospace;
+}
+
+@counter-style hackathon-mojis {
+    system: fixed;
+    symbols: 🥉 💰 🗑️ 📒
+}
+

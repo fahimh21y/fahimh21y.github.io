@@ -23,6 +23,12 @@ body {
         padding-right: 1rem;
         padding-left: 1rem;
     }
+    .projects-container {
+        width: inherit;
+    }
+    .card {
+        width: inherit;
+    }
 }
 
 .navbar {
@@ -92,16 +98,29 @@ p {
 
 .projects-container {
     display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.1);
-    margin: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    margin: 2rem;
+    margin-left: 0;
+    margin-top: 0;
     border-radius: 8px;
     height: 400px;
-    width: 250px;
+    width: 16rem;
+    transition: 0.5s ease;
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: 6px 5px 3px 0px #0097A7;
+    transform: translateX(-6px);
+    transition: .5s ease;
+
 }
 
 .card h3 {
